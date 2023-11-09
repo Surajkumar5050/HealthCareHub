@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_03"
+    android:textAlignment="gravity">
+
+    <ListView
+        android:id="@+id/listViewLT"
+        android:layout_width="323dp"
+        android:layout_height="570dp"
+        android:layout_margin="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLabTestAndPackages"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/textViewLabTestAndPackages"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabTestAndPackages"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <ImageView
+        android:id="@+id/imageButtonLTBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="back"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLabTestAndPackages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewLabTestAndPackages"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <TextView
+        android:id="@+id/textViewLabTestAndPackages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+
+        android:autoLink="all|phone"
+        android:background="@drawable/textview_border"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="src_over"
+        android:breakStrategy="high_quality"
+        android:drawableTint="@color/design_default_color_error"
+        android:drawableTintMode="src_over"
+        android:scrollbarStyle="insideInset"
+        android:text="LabTest and Packages"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:barrierMargin="?attr/listPreferredItemPaddingLeft"
+        app:layout_constraintBottom_toTopOf="@+id/listViewLT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGoToCart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="29dp"
+        android:text="Go To Cart"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/listViewLT"
+        app:layout_constraintStart_toStartOf="@+id/listViewLT"
+        app:layout_constraintTop_toBottomOf="@+id/listViewLT" />
+</androidx.constraintlayout.widget.ConstraintLayout>

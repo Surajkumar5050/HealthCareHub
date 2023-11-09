@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/wallpaper_03"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageButtonLTDBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="back to lab test"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPackageName"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPackageName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewPackageName"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <TextView
+        android:id="@+id/textViewPackageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textview_border"
+        android:text="Lab Test and Packages"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+        android:layout_width="339dp"
+        android:background="#80FFFFFF"
+        android:layout_height="360dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="22dp"
+        android:inputType="textMultiLine"
+        android:text="EditText"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTotalCost"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPackageName"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/textViewPackageName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPackageName" />
+
+    <Button
+        android:id="@+id/buttonAddToCart"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="116dp"
+        android:background="#80000000"
+        android:text="Add To Cart"
+        android:textColorHighlight="@color/my_button_color"
+        android:textColorLink="@color/my_button_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotalCost"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalCost"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalCost" />
+
+    <TextView
+        android:id="@+id/textViewTotalCost"
+        android:layout_width="wrap_content"
+        android:background="#80FFFFFF"
+        android:layout_height="25dp"
+        android:layout_marginTop="22dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddToCart"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_03"
+    tools:context=".BuyMedicineDetailsActivity">
+
+    <TextView
+        android:id="@+id/textViewTitleBMD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Medicines"
+        android:textSize="25dp"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+        android:background="@drawable/textview_border"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLineBMD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLineBMD"
+        android:layout_width="381dp"
+        android:layout_height="423dp"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPriceBMD"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleBMD"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleBMD"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleBMD" />
+
+    <TextView
+        android:id="@+id/textViewPriceBMD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Price: 1000/-"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+        android:background="@drawable/textview_border"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLineBMD"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLineBMD"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLineBMD" />
+
+    <Button
+        android:id="@+id/buttonAddtocartBMD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="Add to cart"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBackBMD"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPriceBMD"
+        app:layout_constraintStart_toStartOf="@+id/textViewPriceBMD"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPriceBMD"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <Button
+        android:id="@+id/buttonBackBMD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAddtocartBMD"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddtocartBMD"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddtocartBMD" />
+</androidx.constraintlayout.widget.ConstraintLayout>

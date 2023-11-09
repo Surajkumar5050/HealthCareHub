@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wallpaper_03"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/textViewTitleCBM2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:text="Lab Test &amp; Cart Items"
+        android:background="@drawable/textview_border"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDeliverLocationCBM2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <TextView
+        android:id="@+id/textViewDeliverLocationCBM2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="16dp"
+        android:text="Deliver Location : Pune"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLineCBM2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonBackCBM2" />
+
+    <ListView
+        android:id="@+id/editTextTextMultiLineCBM2"
+        android:layout_width="363dp"
+        android:layout_height="215dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:gravity="start|center"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTotalCostCBM2"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleCBM2"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleCBM2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDeliverLocationCBM2" />
+
+    <TextView
+        android:id="@+id/textViewTotalCostCBM2"
+        android:layout_width="141dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Total Cost : 1200 /-"
+        android:background="@drawable/textview_border"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDDCBM2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLineCBM2"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLineCBM2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLineCBM2" />
+
+    <EditText
+        android:id="@+id/editTextDDateCBM2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDTLTC"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDDCBM2"
+        app:layout_constraintStart_toStartOf="@+id/textViewDDCBM2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDDCBM2" />
+
+    <TextView
+        android:id="@+id/textViewDDCBM2"
+        android:layout_width="128dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="7dp"
+        android:text="Select Deliver Date"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDDateCBM2"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotalCostCBM2"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalCostCBM2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalCostCBM2" />
+
+    <EditText
+        android:id="@+id/editTextTTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="77dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCheckoutCBM2"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDTLTC"
+        app:layout_constraintStart_toStartOf="@+id/textViewDTLTC"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDTLTC" />
+
+    <TextView
+        android:id="@+id/textViewDTLTC"
+        android:layout_width="157dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Select Deliver Time"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTTime1"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDDateCBM2"
+        app:layout_constraintStart_toStartOf="@+id/editTextDDateCBM2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDDateCBM2" />
+
+    <Button
+        android:id="@+id/buttonCheckoutCBM2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="Checkout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTTime1"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/editTextTTime1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTTime1" />
+
+    <ImageView
+        android:id="@+id/imageButtonChooseTime"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/clock_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTTime1"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonChooseDate2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonChooseDate2"
+        app:layout_constraintTop_toTopOf="@+id/editTextTTime1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageButtonChooseDate2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="138dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/calendar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextDDateCBM2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextDDateCBM2"
+        app:layout_constraintTop_toTopOf="@+id/editTextDDateCBM2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageButtonBackCBM2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTitleCBM2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
