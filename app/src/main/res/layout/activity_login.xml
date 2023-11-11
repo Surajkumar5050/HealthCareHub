@@ -1,58 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/login_page_3"
-    android:padding="16dp"
-    android:gravity="center">
+    android:padding="16dp">
 
     <EditText
-        android:id="@+id/editTextUsername"
-
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
-        android:background="@drawable/textview_border"
-        android:backgroundTintMode="add"
-        android:hapticFeedbackEnabled="false"
-        android:hint="Username"
-        android:textStyle="bold" />
+        android:hint="Username" />
 
     <EditText
         android:id="@+id/editTextPassword"
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@drawable/textview_border"
         android:hint="Password"
-        android:inputType="textPassword"
-        android:textStyle="bold" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/buttonLogin"
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textColor="#80000000"
-        android:background="@drawable/textview_border"
-        android:text="Login"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:textStyle="bold" />
+        android:text="Login"/>
 
     <TextView
-        android:id="@+id/textViewCreateAccount"
         android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:layout_margin="16dp"
-        android:onClick="openRegisterActivity"
-        android:text="Create an account"
-        android:textColor="@color/black" />
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? "
+        android:gravity="center"/>
 
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register here"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_dark"/>
 </LinearLayout>

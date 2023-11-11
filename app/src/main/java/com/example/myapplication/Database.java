@@ -15,19 +15,41 @@ public class Database extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
 
+
+
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        String qry1 = "create table users(username text, email text, password text)";
+        sqLiteDatabase.execSQL(qry1);
+
         String qry2 = "create table cart(username text, product text, price float, otype text)";
         sqLiteDatabase.execSQL(qry2);
 
         String qry3 = "create table orderplace(username text, fullname text, address text, pincode text, contactno text,date text, time text, amount text, otype text)";
         sqLiteDatabase.execSQL(qry3);
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+
+
+    public boolean login(String username, String password) {
+        SQLiteDatabase db = getReadableDatabase();
+        String[] selectionArgs = {username, password};
+        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ? AND password = ?", selectionArgs);
+
+        boolean result = cursor.moveToFirst();
+
+        cursor.close();
+        db.close();
+
+        return result;
+    }
+
+
 
     public void addCart(String username, String product, float price, String otype){
         ContentValues cv = new ContentValues();
@@ -113,5 +135,15 @@ public class Database extends SQLiteOpenHelper {
         }
         db.close();
         return arr;
+    }
+
+    public void register(String username, String email, String password) {
+        ContentValues cv = new ContentValues();
+        cv.put("username",username);
+        cv.put("email",email);
+        cv.put("password",password);
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert("users",null,cv);
+        db.close();
     }
 }
